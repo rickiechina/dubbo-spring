@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: dubbo-provider
+server:
+  port: 9090
+
+dubbo:
+  application:
+    id: dubbo-provider-name
+    name: dubbo-provider-name
+  scan:
+    basePackages: com.example.service.impl
+  registry:
+    id: my-registry
+    address: zookeeper://127.0.0.1:2181
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: 20880
